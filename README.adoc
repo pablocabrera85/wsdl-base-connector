@@ -9,10 +9,10 @@ This tools are great at consuming the services, but any business logic or api cu
 Lets take for example this simple scenario:
 
 --------------------------------------
-I have a web service that exposes a login message, that give us back a token that we need send in every request. 
-
-If we wanted to use the get message to retrieve an entity, we need to get sent that token. 
-
+I have a web service that exposes a login message.
+The login give us back a token that we need send in every request. 
+If we wanted to use the get message to retrieve an entity, 
+we need to get sent that token. 
 Also, our session could expire and we need to issue a new token.
 --------------------------------------
 
