@@ -18,9 +18,7 @@ import org.mule.modules.wsdlbase.api.SessionExpiredException;
 import org.mule.modules.wsdlbase.config.WsdlConfig;
 
 /**
- * Anypoint Connector.
- * 
- * No description available
+ * Anypoint Wsdl Base Connector.
  * 
  * @author MuleSoft, Inc.
  * 
@@ -32,21 +30,16 @@ public class WsdlBaseConnector {
     private WsdlConfig config;
 
     /**
-     * No summary available
+     * Retrieves an entity by Id
      * 
      * {@sample.xml ../../../doc/wsdl-base-connector.xml.sample wsdl-base:get}
      * 
-     * @param get
-     *            No description available
-     * @param token
-     *            No description available
-     * @return Return value
-     * @throws SessionExpiredException
-     *             When the call fails
-     * @throws InvalidTokenException
-     *             When the call fails
-     * @throws NoSuchEntityException
-     *             When the call fails
+     * @param id Entity identifier
+     *
+     * @return the Entity matching the provided id.
+     * @throws SessionExpiredException then the session is no longer valid
+     * @throws InvalidTokenException when the token provided is not valid (this should never happen as the token is provided by the API)
+     * @throws NoSuchEntityException When the provided ID doesn't exists.
      */
     @Processor
     @ReconnectOn(exceptions = { SessionExpiredException.class })

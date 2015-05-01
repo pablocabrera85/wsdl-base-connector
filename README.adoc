@@ -34,7 +34,7 @@ If you build a connector, this can become a reusable component that handles this
 
 The steps are pretty straight foward:
 
-. Using the WSDL and CXF, generate a client for your web service. This is achieved by adding the CXF goal on your link:pom.xml[]
+. Using a WSDL and http://cxf.apache.org/docs/maven-cxf-codegen-plugin-wsdl-to-java.html[CXF code generation], generate a client for your web service. This is achieved by adding the CXF goal on your pom.xml
 
 . Create a @ConnectionManagement configuration for your connector as shown in WsdlConfig. Here you will have all the connection logic and initialization of the client.
 
@@ -43,3 +43,6 @@ The steps are pretty straight foward:
 ====
 Take into account that reconnection will only work if your connection strategy specify that you want to reconnect.
 ====
+
+=== What to do Next?
+You can pick a different service that is exposed with a wsdl and try to build a connector for it.

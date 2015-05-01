@@ -38,14 +38,13 @@ public class WsdlConfig {
     private String token;
 
     /**
-     * Connect
+     * Connect to the wsdl service and makes the login request. After this, we have the token initialized and ready to be used in following requests.
      * 
      * @param username
      *            A username
      * @param password
      *            A password
-     * @throws ConnectionException
-     *             When the call fails
+     * @throws ConnectionException when user and password are not correct
      */
     @Connect
     @TestConnectivity
