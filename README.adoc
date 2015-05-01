@@ -1,0 +1,35 @@
+= WSDL Base Connector
+
+== Why Would You Want to Build a WSDL Base Connector?
+
+If you have used mule, you would know that there are great tools in it like the http://www.mulesoft.org/documentation/display/current/Web+Service+Consumer[Web Service Consumer] that can help you consume a wsdl base service, or even the http://www.mulesoft.org/documentation/display/current/CXF+Component+Reference[CXF Component], so...why bother building a connector?
+
+This tools are great at consuming the services, but any business logic or api custom behavior needs to be added to the mule app.
+
+Lets take for example this simple scenario:
+
+I have a web service that exposes a login message, that give us back a token that we need send in every request. If we wanted to use the get message to retrieve an entity, we need to get sent that token. Also, our session could expire and we need to issue a new token.
+
+This simple scenario requires that:
+* Your mule app has one flow to make the login request.
+* That flow needs to save the token in a session variable or an object store.
+* Another flow that has the get request by getting the token from the place were we save it.
+* An exception strategy and somehow make the login request if the session expires.
+
+If anyone on your organization needs to consume the same service, you will need to replicate this pieces, and if anyone finds a bug, you will need to replicate the fix everywhere.
+
+If you build a connector, this can become a reusable component that handles this in a transparent way to the users, with only a single box that you configure once, and use it in an extremely simple flow as you will see in the demo provided.
+
+== Build a WSDL Base Connector
+
+The steps are pretty straight foward:
+
+. Using the WSDL and CXF, generate a client for your web service. This is achieved by adding the CXF goal on your link:pom.xml[]
+
+. Create a @ConnectionManagement configuration for your connector as shown in WsdlConfig. Here you will have all the connection logic and initialization of the client.
+
+. On your @Connector class add an operation that is marked with the @ReconnectOn and specify the Exception that should trigger reconnection.
+[NOTE]
+====
+Take into account that reconnection will only work if your connection strategy specify that you want to reconnect.
+====

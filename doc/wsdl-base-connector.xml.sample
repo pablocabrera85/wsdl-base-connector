@@ -1,0 +1,80 @@
+<!-- BEGIN_INCLUDE(wsdl-base:get) -->
+	<wsdl-base:get config-ref="Wsdl-base">
+		<wsdl-base:get ref="#[flowVars.GetRef]"/>
+	</wsdl-base:get>
+<!-- END_INCLUDE(wsdl-base:get) -->
+
+<!-- BEGIN_INCLUDE(wsdl-base:create) -->
+	<wsdl-base:create config-ref="Wsdl-base">
+		<wsdl-base:create ref="#[flowVars.CreateRef]"/>
+	</wsdl-base:create>
+<!-- END_INCLUDE(wsdl-base:create) -->
+
+<!-- BEGIN_INCLUDE(wsdl-base:delete) -->
+	<wsdl-base:delete config-ref="Wsdl-base">
+		<wsdl-base:delete ref="#[flowVars.DeleteRef]"/>
+	</wsdl-base:delete>
+<!-- END_INCLUDE(wsdl-base:delete) -->
+
+<!-- BEGIN_INCLUDE(wsdl-base:update) -->
+	<wsdl-base:update config-ref="Wsdl-base">
+		<wsdl-base:update ref="#[flowVars.UpdateRef]"/>
+	</wsdl-base:update>
+<!-- END_INCLUDE(wsdl-base:update) -->
+
+<!-- BEGIN_INCLUDE(wsdl-base:get-list) -->
+	<wsdl-base:get-list config-ref="Wsdl-base">
+		<wsdl-base:get-list ref="#[flowVars.GetListRef]"/>
+	</wsdl-base:get-list>
+<!-- END_INCLUDE(wsdl-base:get-list) -->
+
+<!-- BEGIN_INCLUDE(wsdl-base:login) -->
+	<wsdl-base:login config-ref="Wsdl-base">
+		<wsdl-base:login ref="#[flowVars.LoginRef]"/>
+	</wsdl-base:login>
+<!-- END_INCLUDE(wsdl-base:login) -->
+
+<!-- BEGIN_INCLUDE(wsdl-base:add-list) -->
+	<wsdl-base:add-list config-ref="Wsdl-base">
+		<wsdl-base:add-list ref="#[flowVars.AddListRef]"/>
+	</wsdl-base:add-list>
+<!-- END_INCLUDE(wsdl-base:add-list) -->
+
+<!-- BEGIN_INCLUDE(wsdl-base:describe-entity) -->
+	<wsdl-base:describe-entity config-ref="Wsdl-base">
+		<wsdl-base:describe-entity ref="#[flowVars.DescribeEntityRef]"/>
+	</wsdl-base:describe-entity>
+<!-- END_INCLUDE(wsdl-base:describe-entity) -->
+
+<!-- BEGIN_INCLUDE(wsdl-base:delete-list) -->
+	<wsdl-base:delete-list config-ref="Wsdl-base">
+		<wsdl-base:delete-list ref="#[flowVars.DeleteListRef]"/>
+	</wsdl-base:delete-list>
+<!-- END_INCLUDE(wsdl-base:delete-list) -->
+
+<!-- BEGIN_INCLUDE(wsdl-base:search-with-query) -->
+	<wsdl-base:search-with-query config-ref="Wsdl-base">
+		<wsdl-base:search-with-query ref="#[flowVars.SearchWithQueryRef]"/>
+	</wsdl-base:search-with-query>
+<!-- END_INCLUDE(wsdl-base:search-with-query) -->
+
+<!-- BEGIN_INCLUDE(wsdl-base:update-list) -->
+	<wsdl-base:update-list config-ref="Wsdl-base">
+		<wsdl-base:update-list ref="#[flowVars.UpdateListRef]"/>
+	</wsdl-base:update-list>
+<!-- END_INCLUDE(wsdl-base:update-list) -->
+
+<!-- BEGIN_INCLUDE(wsdl-base:get-recently-added) -->
+	<wsdl-base:get-recently-added config-ref="Wsdl-base"/>
+<!-- END_INCLUDE(wsdl-base:get-recently-added) -->
+
+<!-- BEGIN_INCLUDE(wsdl-base:logout) -->
+	<wsdl-base:logout config-ref="Wsdl-base">
+		<wsdl-base:logout ref="#[flowVars.LogoutRef]"/>
+	</wsdl-base:logout>
+<!-- END_INCLUDE(wsdl-base:logout) -->
+
+<!-- BEGIN_INCLUDE(wsdl-base:get-entities-list) -->
+	<wsdl-base:get-entities-list config-ref="Wsdl-base"/>
+<!-- END_INCLUDE(wsdl-base:get-entities-list) -->
+

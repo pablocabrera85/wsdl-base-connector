@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:wsdl-base="http://www.mulesoft.org/schema/mule/wsdl-base" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" version="EE-3.6.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/wsdl-base http://www.mulesoft.org/schema/mule/wsdl-base/current/mule-wsdl-base.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd">
+    <http:listener-config name="HTTP_Listener_Configuration" host="0.0.0.0" port="8081" doc:name="HTTP Listener Configuration"/>
+    <wsdl-base:config-type name="WsdlBase__Connection_Managament_type_strategy" username="admin" password="admin" doc:name="WsdlBase: Connection Managament type strategy"/>
+    <flow name="wsdl-base-mule-appFlow">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/get" doc:name="HTTP"/>
+        <wsdl-base:get config-ref="WsdlBase__Connection_Managament_type_strategy" doc:name="WsdlBase"/>
+        <json:object-to-json-transformer doc:name="Object to JSON"/>
+    </flow>
+</mule>
