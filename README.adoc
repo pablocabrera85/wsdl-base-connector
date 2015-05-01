@@ -8,12 +8,18 @@ This tools are great at consuming the services, but any business logic or api cu
 
 Lets take for example this simple scenario:
 
+--------------------------------------
 I have a web service that exposes a login message, that give us back a token that we need send in every request. If we wanted to use the get message to retrieve an entity, we need to get sent that token. Also, our session could expire and we need to issue a new token.
+--------------------------------------
 
 This simple scenario requires that:
+
 * Your mule app has one flow to make the login request.
+
 * That flow needs to save the token in a session variable or an object store.
+
 * Another flow that has the get request by getting the token from the place were we save it.
+
 * An exception strategy and somehow make the login request if the session expires.
 
 If anyone on your organization needs to consume the same service, you will need to replicate this pieces, and if anyone finds a bug, you will need to replicate the fix everywhere.
