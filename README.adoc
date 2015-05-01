@@ -45,4 +45,7 @@ Take into account that reconnection will only work if your connection strategy s
 ====
 
 === What to do Next?
-You can pick a different service that is exposed with a wsdl and try to build a connector for it.
+
+* You can pick a different service that is exposed with a wsdl and try to build a connector for it.
+
+* Read the http://www.mulesoft.org/documentation/display/current/Anypoint+Connector+DevKit[Anypoint Connector DevKit] documentation.
