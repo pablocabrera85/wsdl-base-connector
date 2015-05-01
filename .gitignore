@@ -1,12 +1,22 @@
 *.class
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
+*.classpath
+*.project
+*.factorypath
+*.settings
 # Package Files #
 *.jar
 *.war
 *.ear
+target
+.DS_Store
+*/build.log
+*.iml
+*.idea
+/target
+bin
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+# Vim temp files
+**/.*.un~
+
+# Build logs
+**/build.log
